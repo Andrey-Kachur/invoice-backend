@@ -8,7 +8,7 @@ This is a NestJS-based server for managing invoices. It includes user authentica
    npm install
 
 2. Setup env file
-   DATABASE_URL=postgresql://postgres:postgres@localhost:5433/invoices
+   DATABASE_URL=postgresql://postgres:postgres@localhost:5432/invoices
 
 3. Run the database migrations:
    npx prisma migrate dev,
