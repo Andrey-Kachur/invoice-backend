@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:17 # Use PostgreSQL version 17
+    container_name: postgres-invoices-db
+    ports:
+      - '5432:5432' # Map the host port to the container port
+    environment:
+      POSTGRES_DB: invoices # Database name
+      POSTGRES_USER: postgres # Username
+      POSTGRES_PASSWORD: postgres # Password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - postgres_network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  postgres_network:
+    driver: bridge
