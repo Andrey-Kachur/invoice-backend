@@ -11,14 +11,15 @@ This is a NestJS-based server for managing invoices. It includes user authentica
    DATABASE_URL=postgresql://postgres:postgres@localhost:5433/invoices
 
 3. Run the database migrations:
-   npx prisma migrate dev
-   npx prisma db push
-   npx prisma generate
+   npx prisma migrate dev,
+   npx prisma generate,
+   npx prisma db push,
 
-4. Seed the database:
+
+5. Seed the database:
    npm run seed
 
-5. Start the server:  
+6. Start the server:  
     npm run start:dev
 
    ## Authentication
